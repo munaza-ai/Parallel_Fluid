@@ -136,9 +136,8 @@ module module_types
     real(wp) :: r, u, w, t, p, hv_coef
     real(wp), dimension(STEN_SIZE) :: stencil
     real(wp), dimension(NVARS) :: d3_vals, vals
-
+    
     call atmostat%exchange_halo_x( )
-
     hv_coef = -hv_beta * dx / (16.0_wp*dt)
     do k = 1, nz
       do i = 1, nx+1

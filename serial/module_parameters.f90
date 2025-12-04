@@ -1,4 +1,4 @@
-module calculation_types
+  module calculation_types
   use netcdf, only : nf90_real, nf90_double
   use iso_fortran_env
   implicit none

@@ -106,8 +106,28 @@ module dimensions
   use indexing
   implicit none
   public
-  integer , parameter :: nx = 100
-  integer , parameter :: nz = int(nx * zlen/xlen)
-  real(wp), parameter :: sim_time = 1000.0_wp
-  real(wp), parameter :: output_freq = 10.0_wp
+  !parmeter=constant(file cannot read them). so make it normal variable remove the parameter. 
+  integer :: nx = 100
+  integer :: nz
+  real(wp) :: sim_time = 1000.0_wp
+  real(wp) :: output_freq = 10.0_wp
+
+  namelist /input/ nx, sim_time, output_freq !to read the data(y namelsit ko btata h k input sy kon sy varible read krny h)
+contains
+  subroutine read_params() !to read the parametrs from file
+    integer :: iostat ! error checking variable(in/output status)when we read/write teh file.it tells about the rrror
+
+    ! File open 10 until(id) with name namelist.in and jo phly sy majood hni chnay h(old) or agr nh h to error m dal do) action(bs
+    ! read kro file ko write/delete nh)
+    open(unit=10, file='namelist.in', status='old', action='read', iostat=iostat)
+    if (iostat /= 0) then
+       print *, "namelist.in not found, using default values."
+    else
+       read(10, nml=input, iostat=iostat)
+       if (iostat /= 0) print *, "Error reading namelist.in"
+       close(10)!close the file
+    end if
+    ! Compute nz
+    nz = int(nx * zlen / xlen)!update the value of nz after read the nx from the file
+  end subroutine read_params
 end module dimensions

@@ -1,0 +1,6 @@
+&input
+  nx = 120
+  sim_time = 2000.0
+   output_freq = 10
+/
+

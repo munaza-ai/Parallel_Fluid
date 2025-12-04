@@ -1,0 +1,58 @@
+Loading netcdf-fortran/4.6.1--openmpi--4.1.6--gcc--12.2.0-spack0.22
+  Loading requirement: glibc/2.28--gcc--12.2.0-gi6mmti
+    gcc-runtime/12.2.0--gcc--12.2.0-dqfwf7y bzip2/1.0.8-ib3znej
+    lz4/1.9.4--gcc--12.2.0-dcavnmi snappy/1.1.10--gcc--12.2.0-gagtosp
+    zlib-ng/2.1.6-jkgunjc zstd/1.5.6-uq5yyux c-blosc/1.21.5--gcc--12.2.0-buk7w2l
+    numactl/2.0.14--gcc--12.2.0-cxzp4ci libiconv/1.17-nhc3mhm xz/5.4.6-xxxg42c
+    libxml2/2.10.3-zbbe7lm ncurses/6.5-svfl57u pigz/2.8-5bwzpml tar/1.34-jgektnv
+    gettext/0.22.5-hsxgafg krb5/1.20.1-n4kmebh libedit/3.1-20230828-nme7boz
+    libxcrypt/4.4.35-7om46b5 openssh/9.7p1-tk2b5yv
+    openmpi/4.1.6--gcc--12.2.0-cuda-12.2 pkgconf/2.2.0
+    hdf5/1.14.3--openmpi--4.1.6--gcc--12.2.0-spack0.22
+    libaec/1.0.6--gcc--12.2.0-blqbmai
+    parallel-netcdf/1.12.3--openmpi--4.1.6--gcc--12.2.0-spack0.22
+    netcdf-c/4.9.2--openmpi--4.1.6--gcc--12.2.0-spack0.22
+Loading gcc/12.2.0
+  Loading requirement: binutils/2.42
+make: Nothing to be done for 'all'.
+ SIMPLE ATMOSPHERIC MODEL STARTING.
+ INITIALIZING MODEL STATUS.
+ nx         :         1000
+ nz         :          500
+ dx         :    20.000000000000000     
+ dz         :    20.000000000000000     
+ dt         :    6.6666666666666666E-002
+ final time :    2000.0000000000000     
+ MODEL STATUS INITIALIZED.
+ TIME PERCENT :  0%
+ TIME PERCENT : 10%
+ TIME PERCENT : 20%
+ TIME PERCENT : 30%
+ TIME PERCENT : 40%
+ TIME PERCENT : 50%
+ TIME PERCENT : 60%
+ TIME PERCENT : 70%
+ TIME PERCENT : 80%
+ TIME PERCENT : 90%
+ ----------------- Atmosphere check ----------------
+ Fractional Delta Mass  :    9.5753362312326715E-015
+ Fractional Delta Energy:    1.5480269063133023E-004
+ ---------------------------------------------------
+ SIMPLE ATMOSPHERIC MODEL RUN COMPLETED.
+ USED CPU TIME:    1008.0445235339999     
+ USED CPU TIME no rate:         1008044523534
+ OpenMP threads:            8
+ xtend for variables
+ TIME:    260.88299999948725     
+ ztend for flux
+ TIME:    67.301999999957417     
+ ztend for variables
+ TIME:    292.22699999943876     
+ xtend for flux
+ TIME:    110.90200000007813     
+ update
+ TIME:    262.51300000040948     
+ init
+ TIME:    3.5000000000000003E-002
+ total_mass_energy
+ TIME:    1.2000000000000000E-002

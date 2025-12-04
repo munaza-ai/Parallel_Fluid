@@ -1,14 +1,20 @@
 FC = gfortran
+<<<<<<< HEAD:serial/Makefile
 #PROFIL := -fprofile-arcs -ftest-coverage #-fprofile-generate
 #FCFLAGS = -O0 -Wall -pedantic -fcheck=all -fbacktrace  $(PROFIL)-I. `nf-config --fflags` (profiling the code directly
 FCFLAGS = -O0 -Wall -pedantic -fcheck=all -fbacktrace -I. `nf-config --fflags`
 #FCFLAGS = -Ofast -I. `nf-config --fflags` -fPIC #for ofast
 LDFLAGS = -L`nc-config --libdir` `nf-config --flibs`  -L /leonardo/prod/spack/06/install/0.22/linux-rhel8-icelake/gcc-12.2.0/netcdf-fortran-4.6.1-resb6kl33jm3j5jlfi4ssuqxom53xwra/bin/nf-config
 
+=======
+#FCFLAGS = -O0 -Wall -pedantic -fcheck=all -fbacktrace -I. `nf-config --fflags`
+FCFLAGS = -Ofast -I. `nf-config --fflags` -fPIC -fopenmp
+LDFLAGS = -L`nc-config --libdir` `nf-config --flibs`
+>>>>>>> 4037919235a0a760e9516e91fb67be8659354538:OpenMp/Setup_serial/MakefileSerial
 
 all: model
 
-model : model.f90 module_parameters.o module_types.F90 module_physics.o \
+model : model.F90 module_parameters.o module_types.F90 module_physics.o \
         module_output.o
 	$(FC) $(FCFLAGS) $< -o $@ *.o $(LDFLAGS)
 

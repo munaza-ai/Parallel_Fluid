@@ -130,4 +130,9 @@ contains
     ! Compute nz
     nz = int(nx * zlen / xlen)!update the value of nz after read the nx from the file
   end subroutine read_params
+<<<<<<< HEAD
 end module dimensions
+=======
+
+  end module dimensions
+>>>>>>> 4037919235a0a760e9516e91fb67be8659354538
